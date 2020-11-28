@@ -1,5 +1,4 @@
 const express = require('express')
-const multer = require('multer')
 require('./db/mongoose')
 const connectDB = require('./db/mongoose')
 const dotenv = require('dotenv')
