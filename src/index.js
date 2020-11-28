@@ -16,7 +16,7 @@ const methodOveride = require('method-override')
 
 const app = express()
 connectDB()
-const port = process.env.PORT
+const port = process.env.PORT || 5000
 
 app.use(bodyParser.json())
 app.use(methodOveride('_method'))
