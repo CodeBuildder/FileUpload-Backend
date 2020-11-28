@@ -78,7 +78,7 @@ app.get('/', (req, res) => {
 //@post
 //upload file to db
 app.post('/upload', upload.single('file'), (req, res) => {
-    //res.redirect('/')
+    res.redirect('/')
     res.send()
 })
 
@@ -135,18 +135,6 @@ app.get('/image/:filename', (req, res) => {
     })
 
 })  
-
-// @route DELETE /files/:id
-app.delete('/files/:id', (req, res) => {
-    gfs.deleteOne({ _id: req.params.id, root: 'uploads' }, (error, gridStore) => {
-      if (error) {
-        return res.status(404).json({ error });
-      }
-  
-      res.redirect('/');
-    });
-  });
-
 
 
 
